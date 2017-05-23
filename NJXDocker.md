@@ -8,7 +8,7 @@
 
 An essential building block in the DevOps concept is the idea of "infrastructure as code". Getting an application into production requires not only the application code and assets, but also a suitably configured execution environment. A Natural AJAX application, for instance, requires an Apache Tomcat servlet container that is configured in a way that fits the application's requirements.
 
-[Docker](https://www.docker.com/ "Docker") allows specifying the necessary infrastructure and configuration for an application and provides the tools needed to package the application together with the required infrastructure into an *container*. A container can then be deployed for execution an arbitrary physical or virtual machine where Docker is installed.
+[Docker](https://www.docker.com/ "Docker") allows specifying the necessary infrastructure and configuration for an application and provides the tools needed to package the application together with the required infrastructure into a *container*. A container can then be deployed for execution an arbitrary physical or virtual machine where Docker is installed.
 
 All required configuration files describing the execution environment for an application can thus be kept in one place (usually a version control system), where it can be maintained by a combined team of developers and operators.
 
@@ -28,9 +28,9 @@ We check if Docker is correctly installed:
 
 ### Creating the container
 
-As infrastructure for our application we need a suitably configured Tomcat server. [Docker Hub](https://hub.docker.com/) provides a lot of readymade images that we can use to build our container. We specify our container in the so-called *Dockerfile*.
+As infrastructure for our application we need a suitably configured Tomcat server. [Docker Hub](https://hub.docker.com/) provides a lot of ready made images that we can use to build our container. We specify our container in the so-called *Dockerfile*.
 
-As a basis for our new cintainer we use the readymade image tomcat:8.0 from [Docker Hub](https://hub.docker.com/)
+As a basis for our new container we use the image tomcat:8.0 from [Docker Hub](https://hub.docker.com/)
 
 Contents of *Dockerfile*:
 
@@ -56,7 +56,7 @@ We build the container:
 
 ![](NJXDocker03.png)
 
-The builder executes the steps in the Dockerfile and creates the new container. It stores intermediate build results in a cache. If we later need to rebuild the container, we omit the --no-cache option, so that unchanged intermediate build results are reused.
+The builder executes the steps in the Dockerfile and creates the new container. It stores intermediate build results in a cache. If we later need to rebuild the container, we can omit the --no-cache option, so that unchanged intermediate build results are reused.
 
 ### Running the container
 
@@ -64,7 +64,7 @@ Now we can deploy and run the container:
 
 ![](NJXDocker04.png)
 
-Now the container is running in its own virtual machine. What does the parameter -p 8888:8080 mean? The tomcat:8.0 image we used as starting point for our container exposes a HTTP connecttor at port 8080. With the parameter -p 8888:8080 we map that port on the port 8888 on the *host* machine (here: *UbuntuDocker*). Thus we can access our web application under http://UbuntuDocker:8888/NaturalAjaxDemos:
+Now the container is running in its own virtual machine. What does the parameter -p 8888:8080 mean? The tomcat:8.0 image we used as starting point for our container exposes a HTTP connector at port 8080. With the parameter -p 8888:8080 we map that port on the port 8888 on the *host* machine (here: *UbuntuDocker*). Thus we can access our web application under http://UbuntuDocker:8888/NaturalAjaxDemos:
 
 ![](NJXDocker05.png)
 
