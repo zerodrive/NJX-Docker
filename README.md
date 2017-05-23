@@ -8,7 +8,7 @@
 
 An essential building block in the DevOps concept is the idea of "infrastructure as code". Getting an application into production requires not only the application code and assets, but also a suitably configured execution environment. A Natural AJAX application, for instance, requires an Apache Tomcat servlet container that is configured in a way that fits the application's requirements.
 
-[Docker](https://www.docker.com/ "Docker") allows specifying the necessary infrastructure and configuration for an application and provides the tools needed to package the application together with the required infrastructure into a *container*. A container can then be deployed for execution an arbitrary physical or virtual machine where Docker is installed.
+[Docker](https://www.docker.com/ "Docker") allows specifying the necessary infrastructure and configuration for an application and provides the tools needed to package the application together with the required infrastructure into a *container*. A container can then be deployed for execution into an arbitrary physical or virtual machine where Docker is installed.
 
 All required configuration files describing the execution environment for an application can thus be kept in one place (usually a version control system), where it can be maintained by a combined team of developers and operators.
 
