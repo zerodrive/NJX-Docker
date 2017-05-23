@@ -64,7 +64,7 @@ Now we can deploy and run the container:
 
 ![](NJXDocker04.png)
 
-Now the container is running in its own virtual machine. What does the parameter -p 8888:8080 mean? The tomcat:8.0 image we used as starting point for our container exposes a HTTP connecttor at port 8080. With the parameter -p 8888:8080 we map that port on the port 8888 on the *host* machine (here: *UbuntuDocker*). Thus we can access our web application under http://UbuntuDocker:8888/NaturalAjaxDemos:
+Now the container is running in its own virtual machine. What does the parameter -p 8888:8080 mean? The tomcat:8.0 image we used as starting point for our container exposes a HTTP connector at port 8080. With the parameter -p 8888:8080 we map that port on the port 8888 on the *host* machine (here: *UbuntuDocker*). Thus we can access our web application under http://UbuntuDocker:8888/NaturalAjaxDemos:
 
 ![](NJXDocker05.png)
 
@@ -74,7 +74,7 @@ With the command *docker ps* we can list the running containers:
 
 ![](NJXDocker06.png)
 
-### Stopping the running containers
+### Stopping the running container
 
 With the command *docker stop* we can stop the running container. We specify the container id that was displayed after startup, or we get the id from the docker ps command. We need not specify the complete id, only a part that makes it unique:
 
