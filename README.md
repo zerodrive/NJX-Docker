@@ -1,6 +1,6 @@
 ![](logo_s.png)
 
-#####Thomas Schwade - May 23, 2017
+##### Thomas Schwade - May 23, 2017
 
 ## Running Natural Ajax in a Docker Container
 
